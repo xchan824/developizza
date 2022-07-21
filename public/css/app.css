@@ -11,8 +11,16 @@ body {
     background-color: #ebd1a1;
 }
 
-.homepage {
+main {
     margin-top: 3.5rem;
     /* background-color: #db5113; */
     min-height: 92.5vh;
+}
+
+.homepage {
+    margin-top: 4.5rem;
+}
+
+footer {
+    background-color: #ebd1a1;
 }
