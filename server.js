@@ -5,7 +5,6 @@ const path = require('path');
 const expressLayout = require('express-ejs-layouts');
 const PORT = process.env.PORT || 3000;
 
-
 // assets
 app.use(express.static('public'));
 
@@ -20,6 +19,14 @@ app.get('/', (req, res) => {
 
 app.get('/cart', (req, res) => {
     res.render('customers/cart');
+});
+
+app.get('/login', (req, res) => {
+    res.render('auth/login');
+});
+
+app.get('/register', (req, res) => {
+    res.render('auth/register');
 });
 
 app.listen(PORT, () => {
