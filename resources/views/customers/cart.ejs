@@ -33,32 +33,32 @@
                 <span class="mb-2">Total Amount: <b>₱<%= session.cart.totalPrice %></b></span>
             </div>
         </div>
+        
         <div class="row container-fluid d-flex">
             <div class="col d-flex">
             </div>
             <div class="col d-flex">
             </div>
+            <% if (user) { %>
             <div class="col d-flex flex-column justify-content-end">
-                <form class="d-flex flex-column" action="">
-                    <input class="mb-2" type="text" placeholder="Enter phone number">
-                    <input class="mb-2" type="text" placeholder="Enter address">
+                <form action="/orders" method="POST" class="d-flex flex-column">
+                    <input name="phone" class="mb-2" type="text" placeholder="Enter phone number">
+                    <input name="address" class="mb-2" type="text" placeholder="Enter address">
                     <div class="d-flex flex-column align-items-end">
                         <button type="submit" class="btn btn-warning w-50">Order Now</button>
                     </div>
                 </form>
             </div>
-        </div>
-        <div class="row container-fluid d-flex">
-            <div class="col d-flex">
-            </div>
-            <div class="col d-flex">
-            </div>
+            <% } else { %>
             <div class="col d-flex flex-column justify-content-end">
                 <div class="d-flex flex-column align-items-end">
-                    <a href="/" type="button" class="btn btn-warning w-50">Login to continue</a>
+                    <a href="/login" type="button" class="btn btn-warning w-50">Login to continue</a>
                 </div>
             </div>
+            <% } %>
         </div>
+        
+        
     </div>
 </main>
 <% } else { %>

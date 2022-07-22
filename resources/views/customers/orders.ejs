@@ -1,0 +1,43 @@
+<!-- main -->
+<main class="homepage container text-center">
+    <h1>All Orders</h1>
+    <div class="container d-flex text-center justify-content-center align-items-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Orders</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(orders.length) { %>
+                <% orders.forEach((order) => { %>
+                <tr>
+                    <td>
+                        <a class="link" href="/"><%= order._id %></a>
+                    </td>
+                    <td>
+                        <%= order.phone %>
+                    </td>
+                    <td>
+                        <%= order.address %>
+                    </td>
+                    <td>
+                        <%= moment(order.createdAt).format('hh:mm A') %>
+                    </td>
+                </tr>
+                <% }) %>
+                <% } else { %>
+                <tr>
+                    <td>
+                        No orders found
+                    </td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</main>
+<!-- main -->
