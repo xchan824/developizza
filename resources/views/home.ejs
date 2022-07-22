@@ -3,58 +3,22 @@
     <h1>All Pizzas</h1>
     <div class="container d-flex text-center justify-content-center align-items-center">
         <div class="row">
-            <div class="col">
-                <div class="card" style="width: 12rem;">
-                    <img src="/img/pizza.png" class="card-img-top" alt="pizza">
-                    <div class="card-body">
-                        <h5 class="card-title">Carbonara</h5>
-                        <p class="card-text">Small</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span>Php 200</span>
-                            <a href="#" class="btn btn-primary">Add</a>
+            <% pizzas.forEach(pizza => { %>
+                <div class="col">
+                    <div class="card" style="width: 12rem;">
+                        <img src="/img/<%= pizza.image %>" class="card-img-top" alt="pizza">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= pizza.name %></h5>
+                            <p class="card-text"><%= pizza.size %></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>₱<%= pizza.price %></span>
+                                <a href="#" class="btn btn-primary">Add</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 12rem;">
-                    <img src="/img/pizza.png" class="card-img-top" alt="pizza">
-                    <div class="card-body">
-                        <h5 class="card-title">Carbonara</h5>
-                        <p class="card-text">Small</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span>Php 200</span>
-                            <a href="#" class="btn btn-primary">Add</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 12rem;">
-                    <img src="/img/pizza.png" class="card-img-top" alt="pizza">
-                    <div class="card-body">
-                        <h5 class="card-title">Carbonara</h5>
-                        <p class="card-text">Small</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span>Php 200</span>
-                            <a href="#" class="btn btn-primary">Add</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 12rem;">
-                    <img src="/img/pizza.png" class="card-img-top" alt="pizza">
-                    <div class="card-body">
-                        <h5 class="card-title">Carbonara</h5>
-                        <p class="card-text">Small</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span>Php 200</span>
-                            <a href="#" class="btn btn-primary">Add</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <% }) %>
+            
         </div>
     </div>
 </main>
