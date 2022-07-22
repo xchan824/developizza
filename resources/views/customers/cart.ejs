@@ -1,53 +1,26 @@
 <!-- main -->
+<% if (session.cart) { %>
 <main class="homepage container text-center">
     <h1>Order Summary</h1>
     <hr>
     <div class="pizza-list d-flex flex-column text-center justify-content-center align-items-center">
+        <% for (let pizza of Object.values(session.cart.items)) { %>
         <div class="row container-fluid d-flex my-2">
             <div class="col d-flex">
-                <img src="/img/pizza.png" width=50 alt="pizza">
+                <img src="/img/<%= pizza.item.image %>" width=50 alt="pizza">
                 <div class="d-flex flex-column ms-3">
-                    <h5>Marinara</h5>
-                    <span>Medium</span>
+                    <h5><%= pizza.item.name %></h5>
+                    <span><%= pizza.item.size %></span>
                 </div>
             </div>
             <div class="col d-flex justify-content-center align-items-center">
-                <span>1pc(s)</span>
+                <span><%= pizza.qty %>pc(s)</span>
             </div>
             <div class="col d-flex justify-content-end align-items-center">
-                <span>₱200</span>
+                <span>₱<%= pizza.item.price * pizza.qty %></span>
             </div>
         </div>
-        <div class="row container-fluid d-flex my-2">
-            <div class="col d-flex">
-                <img src="/img/pizza.png" width=50 alt="pizza">
-                <div class="d-flex flex-column ms-3">
-                    <h5>Marinara</h5>
-                    <span>Medium</span>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center align-items-center">
-                <span>1pc(s)</span>
-            </div>
-            <div class="col d-flex justify-content-end align-items-center">
-                <span>₱200</span>
-            </div>
-        </div>
-        <div class="row container-fluid d-flex my-2">
-            <div class="col d-flex">
-                <img src="/img/pizza.png" width=50 alt="pizza">
-                <div class="d-flex flex-column ms-3">
-                    <h5>Marinara</h5>
-                    <span>Medium</span>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center align-items-center">
-                <span>1pc(s)</span>
-            </div>
-            <div class="col d-flex justify-content-end align-items-center">
-                <span>₱200</span>
-            </div>
-        </div>
+        <% } %>
     </div>
     <hr>
     <div class="total-price d-flex flex-column text-center justify-content-center align-items-center">
@@ -57,7 +30,7 @@
             <div class="col d-flex">
             </div>
             <div class="col d-flex flex-column justify-content-start align-items-end">
-                <span class="mb-2">Total Amount: <b>₱200</b></span>
+                <span class="mb-2">Total Amount: <b>₱<%= session.cart.totalPrice %></b></span>
             </div>
         </div>
         <div class="row container-fluid d-flex">
@@ -88,12 +61,14 @@
         </div>
     </div>
 </main>
-<!-- <main class="cartpage container text-center d-flex flex-column align-items-center justify-content-center">
+<% } else { %>
+<main class="cartpage container text-center d-flex flex-column align-items-center justify-content-center">
     <h1>Cart Empty</h1>
     <p>
         You probably haven't ordered a pizza yet.
         To order a pizza, go to the main page.
     </p>
     <a href="/" type="button" class="btn btn-warning">Go Back</a>
-</main> -->
+</main>
+<% } %>
 <!-- main -->
