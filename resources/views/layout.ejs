@@ -28,8 +28,14 @@
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link" href="/">Menu</a>
                     <a class="nav-link" href="restaurant">Restaurant</a>
+                    <% if (user) { %>
+                    <form id="logout" action="/logout" method="POST">
+                        <a onclick="document.getElementById('logout').submit()" class="nav-link" href="#">Logout</a>
+                    </form>
+                    <% } else { %>
                     <a class="nav-link" href="/register">Register</a>
                     <a class="nav-link" href="/login">Login</a>
+                    <% } %>
                     <a class="nav-link" href="/cart"><span id="cartCounter"><%= session.cart ? session.cart.totalQty : '' %></span><i class="bi bi-cart4"></i></a>
                 </div>
             </div>
