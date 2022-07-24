@@ -20,7 +20,7 @@
 </head>
 <body>
     <!-- header -->
-    <nav class="navbar fixed-top navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <img src="/img/logo.png" height="50" alt="Developizza">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,14 +28,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link" href="/">Menu</a>
+                    <a class="nav-link" href="/">Home</a>
                     <a class="nav-link" href="restaurant">Restaurant</a>
+                    <a class="nav-link" href="/menu">Menu</a>
+                    <a class="nav-link" href="/contact">Contact Us</a>
                     <% if (user) { %>
                     <form id="logout" action="/logout" method="POST">
                         <a onclick="document.getElementById('logout').submit()" class="nav-link" href="#">Logout</a>
                     </form>
                     <% } else { %>
-                    <a class="nav-link" href="/register">Register</a>
+                    <!-- <a class="nav-link" href="/register">Register</a> -->
                     <a class="nav-link" href="/login">Login</a>
                     <% } %>
                     <a class="nav-link" href="/cart"><span id="cartCounter"><%= session.cart ? session.cart.totalQty : '' %></span><i class="bi bi-cart4"></i></a>
