@@ -69,9 +69,9 @@ app.set('view engine', 'ejs');
 // routes
 require('./routes/web')(app);
 
-app.use((req, res) => {
-    res.status(404).render('errors/404')
-})
+// app.use((req, res) => {
+//     res.status(404).render('errors/404')
+// })
 
 
 
