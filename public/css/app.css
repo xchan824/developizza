@@ -10,9 +10,11 @@ body {
 .navbar {
     background-color: #ebd1a1;
 }
-
+.navbar-nav a{
+  color: black;
+}
 main {
-    margin-top: 3.5rem;
+    /* margin-top: 3.5rem; */
     /* background-color: #db5113; */
     min-height: 92.5vh;
 }
@@ -442,5 +444,66 @@ li
   margin-top: 15px;
 }
 
+/* resto page */
+.resto-page{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/pizza-img1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #EBD1A1;
+}
+.resto-details img{
+  width: 600px;
+  border-radius: 20px;
+}
+.resto-page{
+  text-align: center;
+}
 
+.resto-content{
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.owners{
+  text-align: left;
+}
+.resto-kitchen{
+  text-align: left;
+  display: flex;
+  gap: 10px;
+}
+
+.resto-kitchen img{
+  width: 600px;
+  border-radius: 5px;
+}
+@media screen and (max-width: 1000px) {
+.resto-details img , .resto-kitchen img{
+  width: 500px;
+
+}
+.resto-content, .resto-kitchen{
+  flex-wrap: wrap;
+}
+}
+@media screen and (max-width: 600px) {
+  .resto-details img, .resto-kitchen img {
+      width: 400px;
+
+  }
+}
+
+.text-1 {
+  color: #EBD1A1;
+}
+
+.text-2 {
+  color: #DB5113;
+
+}
+
+.text-3 { 
+  color: #CCAB65;
+}
 
