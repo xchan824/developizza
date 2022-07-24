@@ -23,23 +23,14 @@
     "express-ejs-layouts": "^2.5.1",
     "express-flash": "^0.0.2",
     "express-session": "^1.17.3",
-<<<<<<< HEAD
     "mdb-ui-kit": "^4.3.0",
     "moment": "^2.29.1",
-=======
-    "moment": "^2.29.4",
->>>>>>> 8fb27d546066bff4b849822ed654de0da5334ad8
     "mongoose": "^5.9.25",
     "nodemailer": "^6.7.7",
     "noty": "^3.2.0-beta-deprecated",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
-<<<<<<< HEAD
     "swiper": "^8.3.1"
-=======
-    "react-router-dom": "^6.3.0",
-    "router": "^1.3.7"
->>>>>>> 8fb27d546066bff4b849822ed654de0da5334ad8
   },
   "devDependencies": {
     "cross-env": "^7.0.3",

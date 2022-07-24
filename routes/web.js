@@ -4,6 +4,7 @@ const cartController = require('../app/http/controllers/customers/cartController
 const orderController = require('../app/http/controllers/customers/orderController');
 const adminOrderController = require('../app/http/controllers/admin/orderController');
 const statusController = require('../app/http/controllers/admin/statusController');
+const menuController = require('../app/http/controllers/menuController')
 // const express = require('express');
 // const route = express.Router()
 
@@ -15,6 +16,8 @@ const admin = require('../app/http/middlewares/admin');
 
 function initRoutes(app) {
     app.get('/', homeController().index);
+
+    app.get('/menu', menuController().index)
 
     app.get('/login', guest, authController().login);
     app.post('/login', authController().postLogin);
