@@ -1,0 +1,140 @@
+:root {
+    --color-1: #B00609;
+    --color-2: #CCAB65;
+    --color-3: #DB5113;
+    --color-4: #EBD1A1;
+}
+
+.gallery-parent {   
+    padding: 100px 0px 100px 0px; 
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.gallery-header {
+    padding: 25px;
+}
+
+.gallery-header h2 {
+    text-align: center;
+}
+
+#gallery-1 {
+    width: 100%;
+}
+
+#gallery-1 img {
+    border-radius: 25px;
+    height: 600px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.gallery-1-left {
+    width: 50%;
+}
+
+.gallery-1-right {
+    
+    margin-top: 30px;
+    height: 400px;
+    padding: 150px 50px 150px 50px;
+    width: 50%;
+}
+
+#gallery-2 {
+    justify-content: space-between;
+    padding: 25px;
+    width: 100%;
+}
+
+.gallery-2-left {
+    height: 400px;
+    padding: 150px 50px 150px 50px;
+    
+}
+
+.gallery-2-right {
+    margin-top: -130px;
+   
+}
+
+.gallery-2-right img{
+    height: 600px;
+    width: 700px;    
+}
+
+#gallery-3 {
+    justify-content: space-between;
+    padding: 25px;
+    width: 100%;
+}
+
+.gallery-3-right {
+    height: 400px;
+    padding: 150px 50px 150px 50px;
+    
+}
+
+.gallery-3-left {
+    margin-top: -100px;
+   
+}
+
+.gallery-3-left img{
+    height: 550px;
+    width: 650px;    
+}
+
+#gallery-4 {
+    justify-content: space-evenly;
+    padding: 25px;
+    width: 100%;
+}
+
+#gallery-4 img {
+    border-radius: 25px;
+    height: 600px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.gallery-4-right {
+    margin-top: -70px;
+    width: 50%;
+}
+
+.gallery-4-left {
+    height: 400px;
+    padding: 150px 50px 150px 50px;
+    width: 50%;
+}
+
+#gallery-5 {
+    justify-content: space-between;
+    width: 100%;
+}
+
+#gallery-5 img {
+    border-radius: 25px;
+    height: 600px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.gallery-5-right { 
+    height: 400px;
+    padding: 150px 50px 150px 50px;
+    width: 50%;
+}
+
+.gallery-5-left {
+    margin-top: -70px;   
+    width: 50%;
+}
