@@ -445,6 +445,12 @@ li
 }
 
 /* resto page */
+.resto-page{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/pizza-img1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #EBD1A1;
+}
 .resto-details img{
   width: 600px;
   border-radius: 20px;
