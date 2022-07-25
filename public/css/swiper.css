@@ -7,7 +7,7 @@
 
 .swiper {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
 }
 
 .swiper-slide {
@@ -180,4 +180,33 @@ color: white;
           .services-wrap .text .price {
             font-size: 16px;
             margin-bottom: 0; }
+
         }
+      
+    
+  
+
+
+
+.home-text-2 button {
+  padding: 10px 20px 10px 20px;
+  border-radius: 15px;
+  background-color: var(--color-3);
+  border: none;
+}
+
+.home-text-2 a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.ftco-section{
+  background: url("/img/bg_4.jpg");
+  background-repeat: repeat;
+  color: white;
+}
+.price{
+  color: #EBD1A1;
+}
+

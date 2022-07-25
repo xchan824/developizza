@@ -18,6 +18,9 @@ main {
     /* background-color: #db5113; */
     min-height: 92.5vh;
 }
+.mt5{
+  margin-top: -5rem;
+}
 
 .homepage {
     margin-top: 4.5rem;
@@ -505,5 +508,10 @@ li
 
 .text-3 { 
   color: #CCAB65;
+}
+
+.contact_bg{
+  background: url("/img/food.png");
+  background-repeat: repeat;
 }
 
