@@ -138,3 +138,17 @@
     margin-top: -70px;   
     width: 50%;
 }
+
+.gallery-btn {
+    padding: 10px 20px 10px 20px;
+    border-radius: 15px;
+    background-color: var(--color-3);
+    border: none;
+    
+}
+
+.gallery-btn a {
+    text-decoration: none;
+    color: white;
+}
+
