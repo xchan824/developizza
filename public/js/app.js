@@ -114,8 +114,6 @@ function initAdmin(socket) {
 // </td>
 }
 
-initAdmin(socket);
-
 // change order status
 let statuses = document.querySelectorAll('.status_line');
 let hiddenInput = document.querySelector('#hiddenInput');
@@ -153,8 +151,9 @@ if (order) {
 }
 
 let adminAreaPath = window.location.pathname;
-console.log(adminAreaPath);
+
 if (adminAreaPath.includes('admin')) {
+    initAdmin(socket);
     socket.emit('join', 'adminRoom');
 }
 
