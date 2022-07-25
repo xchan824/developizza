@@ -104,3 +104,13 @@ color: white;
   text-decoration: none;
   color: white;
 }
+
+
+.ftco-section{
+  background: url("/img/bg_4.jpg");
+  background-repeat: repeat;
+  color: white;
+}
+.price{
+  color: #EBD1A1;
+}
