@@ -145,7 +145,7 @@ footer {
 }
 
 .noty_bar {
-  -webkit-backface-visibility: hidden;
+  /* -webkit-backface-visibility: hidden; */
   transform: translate(0, 0) scale(1, 1);
   -webkit-font-smoothing: subpixel-antialiased;
   overflow: hidden;
