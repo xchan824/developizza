@@ -30,7 +30,11 @@
     "noty": "^3.2.0-beta-deprecated",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
+<<<<<<< HEAD
     "socket.io": "^2.5.0",
+=======
+    "socket.io": "^2.3.0",
+>>>>>>> 5ed015df09c4e1add847ee48caa86fb73484b7c7
     "swiper": "^8.3.1"
   },
   "devDependencies": {
