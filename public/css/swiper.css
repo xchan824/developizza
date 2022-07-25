@@ -90,6 +90,92 @@ color: white;
   width: 100%;
   height: 100%;
   margin-top: 20vh;  
+<<<<<<< HEAD
+}
+
+
+.home-text-2 button {
+  padding: 10px 20px 10px 20px;
+  border-radius: 15px;
+  background-color: var(--color-3);
+  border: none;
+}
+
+.home-text-2 a {
+  text-decoration: none;
+  color: white;
+}
+
+.ftco-section 
+{
+  background-image: url('/img/bg_4.jpg');
+}
+.ftco-section p, h3, h4, h2
+{
+  color: #ffff;
+}
+
+.contact_bg {
+  background: url(/img/food.png) repeat;
+  color: #5c3d03; }
+  .contact_bg .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    background: #fac564;
+    opacity: 0; }
+
+
+    @media (max-width: 600.98px) {
+      .ftco-section {
+        background: none;
+      }
+      }
+    
+      @media (max-width: 991.98px) 
+      {
+          .services-wrap {
+            margin-bottom: 30px; } 
+        .services-wrap .img, .services-wrap .text {
+          height: 100%;
+        }
+        .ftco-section p, h3, h4, h2
+          {
+            color: rgb(0, 0, 0);
+          }
+        .services-wrap .text {
+          background: rgba(0, 0, 0, 0.2);
+          }
+          .services-wrap .text h3 {
+            font-size: 20px; }
+          .services-wrap .text .price {
+            font-size: 16px;
+            margin-bottom: 0; }
+            .services-wrap .text .price span {
+              color: #000000; }
+          }
+
+
+          @media (max-width: 380.98px) 
+      {
+          .services-wrap {
+            margin-bottom: 10px;
+          flex-direction: column-reverse; } 
+          
+        .ftco-section p, h3, h4, h2
+          {
+            color: rgb(0, 0, 0);
+          }
+          .services-wrap .text h3 {
+            font-size: 20px; }
+          .services-wrap .text .price {
+            font-size: 16px;
+            margin-bottom: 0; }
+        }
+=======
 }
 
 
@@ -114,3 +200,4 @@ color: white;
 .price{
   color: #EBD1A1;
 }
+>>>>>>> 5ed015df09c4e1add847ee48caa86fb73484b7c7
