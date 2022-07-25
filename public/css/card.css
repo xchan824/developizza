@@ -3,7 +3,7 @@
 }
 
 .section-chefs h1 {
-    padding: 25px;
+    padding: 40px;
     text-align: center;
 }
 
@@ -15,4 +15,8 @@
 .card img {
     width: 100%;
     height: 400px;
+}
+
+.black-text {
+    color: black !important;
 }
