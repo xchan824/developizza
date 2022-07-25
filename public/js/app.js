@@ -1,6 +1,9 @@
 let addToCart = document.querySelectorAll('.add-to-cart');
 let cartCounter = document.querySelector('#cartCounter');
 
+// socket
+let socket = io();
+
 function updateCart(pizza) {
     axios.post('/update-cart', pizza).then(res => {
         cartCounter.innerText = res.data.totalQty;
@@ -28,7 +31,7 @@ addToCart.forEach((btn) => {
 })
 
 // admin function
-function initAdmin() {
+function initAdmin(socket) {
     const orderTableBody = document.querySelector('#orderTableBody');
     let orders = [];
     let markup;
@@ -94,12 +97,22 @@ function initAdmin() {
         `
         }).join('')
     }
+
+    socket.on('orderPlaced', (order) => {
+        new Noty({
+            type: 'success',
+            timeout: 1000,
+            text: 'New order!',
+            progressBar: false,
+        }).show();
+        orders.unshift(order);
+        orderTableBody.innerHTML = '';
+        orderTableBody.innerHTML = generateMarkup(orders);
+    })
 //     <td class="">
 //     ${ order.paymentStatus ? 'paid' : 'Not paid' }
 // </td>
 }
-
-initAdmin();
 
 // change order status
 let statuses = document.querySelectorAll('.status_line');
@@ -109,6 +122,10 @@ order = JSON.parse(order);
 let time = document.createElement('small');
 
 function updateStatus(order) {
+    statuses.forEach((status) => {
+        status.classList.remove('step-completed');
+        status.classList.remove('current');
+    })
     let stepCompleted = true;
     statuses.forEach((status) => {
         let dataProp = status.dataset.status;
@@ -128,3 +145,28 @@ function updateStatus(order) {
 
 updateStatus(order);
 
+// join
+if (order) {
+    socket.emit('join', `order_${order._id}`);
+}
+
+let adminAreaPath = window.location.pathname;
+
+if (adminAreaPath.includes('admin')) {
+    initAdmin(socket);
+    socket.emit('join', 'adminRoom');
+}
+
+socket.on('orderUpdated', (data) => {
+    const updatedOrder = { ...order };
+    updatedOrder.updatedAt = moment().format();
+    updatedOrder.status = data.status;
+    updateStatus(updatedOrder);
+    console.log(data);
+    new Noty({
+        type: 'success',
+        timeout: 1000,
+        text: 'Order updated',
+        progressBar: false,
+    }).show();
+});
