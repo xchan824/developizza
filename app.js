@@ -15,10 +15,6 @@ const Emitter = require('events');
 const nodemailer = require('nodemailer');
 const router = express.Router();
 
-const server = app.listen(PORT, () => {
-    console.log(`Server started at http://localhost:${PORT}`);
-});
-
 // database connection
 mongoose.connect(process.env.MONGO_CONNECTION_URL, { useNewUrlParser: true, useCreateIndex:true, useUnifiedTopology: true, useFindAndModify : true });
 const connection = mongoose.connection;
@@ -120,6 +116,10 @@ app.post('/', (req, res)=> {
         }
     })
 })
+
+const server = app.listen(PORT, () => {
+    console.log(`Server started at http://localhost:${PORT}`);
+});
 
 // socket
 const io = require('socket.io')(server);
