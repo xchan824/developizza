@@ -1,7 +1,7 @@
 {
   "name": "developizza",
   "version": "1.0.0",
-  "description": "",
+  "description": "\"# developizza\"",
   "main": "app.js",
   "engines": {
     "node": "16.x"
@@ -38,5 +38,14 @@
     "cross-env": "^7.0.3",
     "laravel-mix": "^6.0.49",
     "nodemon": "^2.0.19"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xchan824/developizza.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/xchan824/developizza/issues"
+  },
+  "homepage": "https://github.com/xchan824/developizza#readme"
 }
